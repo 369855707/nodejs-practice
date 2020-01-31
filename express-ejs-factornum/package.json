@@ -1,0 +1,16 @@
+{
+  "name": "express-ejs-factornum",
+  "version": "1.0.0",
+  "description": "a nodejs project to calculate factor numbers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "factory",
+    "number",
+    "victor"
+  ],
+  "author": "Victor",
+  "license": "ISC"
+}

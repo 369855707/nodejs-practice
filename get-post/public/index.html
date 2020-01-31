@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我是default</title>
+</head>
+<body>
+	<p>
+		姓名： <input type="text" name="name" />
+	</p>
+	<p>
+		年龄： <input type="text" name="age" />
+	</p>
+	<p>
+		性别： 
+		<label><input type="radio" name="sex" value="男"/>男</label>
+		<label><input type="radio" name="sex" value="女"/>女</label>
+	</p>
+	
+	<p>
+		<input type="button" value="按我发出GET请求 - 我对应04号案例" id="btn1"/>
+	</p>
+	<p>
+		<input type="button" value="按我发出POST请求 - 我对应05号案例" id="btn2"/>
+	</p>
+
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$("#btn1").click(function(){
+			//读取表单
+			var name = $("input[name=name]").val();
+			var age = $("input[name=age]").val();
+			var sex = $("input[name=sex]:checked").val();
+			//发送请求
+			$.get("/addStudent",{
+				name : name,
+				age : age,
+				sex : sex
+			},function(data){
+				if(data == "chenggong"){
+					alert("恭喜，学生已经成功添加！");
+				}else{
+					alert("对不起，服务器错误！");
+				}
+			});
+		});
+
+
+		$("#btn2").click(function(){
+			//读取表单
+			var name = $("input[name=name]").val();
+			var age = $("input[name=age]").val();
+			var sex = $("input[name=sex]:checked").val();
+			//发送请求
+			$.post("/addStudent",{
+				name : name,
+				age : age,
+				sex : sex
+			},function(data){
+				if(data == "chenggong"){
+					alert("恭喜，学生已经成功添加！");
+				}else{
+					alert("对不起，服务器错误！");
+				}
+			});
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <title>food ordering</title>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript">
+    $( document ).ready(function() {
+        $("#submitBtn").click(function() {
+            $.post( "/order", {
+                food : $("#food").val(),
+                phone : $("#phone").val()
+            }, function( data ) {
+                if(data == "1"){
+                    alert( "success" );
+                }else{
+alert("failed")
+                }
+               
+            });
+        });
+    });
+    </script>
+</head>
+<body>
+    <p>
+        <a href="/showAll">checkout all orders</a>
+    </p>
+    Please input your food : 
+    <p>
+        food : <input type = "text" id="food"/>
+    </p>
+    <p>
+        phone : <input type = "text" id="phone"/>
+    </p>
+    <p>
+        <input type = "button" value="submit" id = "submitBtn"/> 
+    </p>
+</body>
+</html>

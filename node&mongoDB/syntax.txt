@@ -1,0 +1,25 @@
+Mongo REPL : 
+mk dir c:\mydatabase
+mongod --dbpath c:\mydatabase
+
+use student
+
+db.banji.insert({"name":"victor","age":18)};
+banji类似于表
+
+导入
+mongoimport -d student -c classroom D:\nodejs-practice\testingdata.txt
+mongoimport --db=student --collection=classroom --file=D:\nodejs-practice\testingdata.txt
+
+db.banji.find()
+db.classroom.find({age : {$gt:16,$lt:37}})
+
+集合collection -> 文档document
+
+REPL : 
+show dbs
+show collections
+db.banjitest.drop() 删除集合
+db.dropDatabase() 删除数据库
+
+MongoDB store data as JSON

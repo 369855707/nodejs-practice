@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <h1>Employees</h1>
+
+    <p><a href="/add">add employee</a></p>
+
+    <%
+        for(var i=0;i<resArr.length;i++) {
+    %>
+    <ul>
+        <li>
+            <%=resArr[i].uname%> - <%=resArr[i].age%> - <%=resArr[i].sex%> - <%=resArr[i].province%>
+        </li>
+    </ul>
+    <%
+        }
+    %>
+
+</body>
+
+</html>

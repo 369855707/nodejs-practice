@@ -23,3 +23,8 @@ db.banjitest.drop() 删除集合
 db.dropDatabase() 删除数据库
 
 MongoDB store data as JSON
+
+
+show collections 显示所有表
+db.tablename.find() 查询该表所有数据
+mongo 连接数据库

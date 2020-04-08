@@ -28,4 +28,5 @@ mongo 连接
 use xxx 切换库
 show collections 显示所有表
 db.tablename.find() 查询该表所有数据
+db.tablename.deleteMany({})删除该表所有数据
 mongo 连接数据库
